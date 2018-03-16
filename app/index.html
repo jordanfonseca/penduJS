@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="dist/app.css">
 </head>
 
-<body ng-app="penduJS" ng-controller="IndexController as IndexCtrl" ng-cloak>
+<body ng-app="penduApp" ng-cloak>
 
+    <a ui-sref="auth" ui-sref-active="active">auth</a>
+    <a ui-sref="ingame" ui-sref-active="active">ingame</a>
+    <a ui-sref="endgame" ui-sref-active="active">endgame</a>
+
+    <ui-view></ui-view>
+    
     <script src="dist/app.js"></script>
 </body>
 </html>

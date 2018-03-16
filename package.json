@@ -25,6 +25,7 @@
     "webpack-cli": "^2.0.11"
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.15",
     "angular": "^1.5.11",
     "jquery": "^3.3.1"
   }
