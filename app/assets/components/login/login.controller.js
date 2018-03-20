@@ -19,16 +19,9 @@ class LoginCtrl {
    * @return {undefined} undefined
    */
   submitForm (valid = false) {
+    
     if (valid) {
-      this._Game.setUser(this.username)
-      this._$state.go('ingame')
-      
-      console.log('form submitted !')
-      console.log(this._Game.getUser())
-    }else {
-
-      console.log('form invalid !')
-      console.log(this._Game.getUser())
+      this._Game.login(this.username)
     }
   }
 

@@ -1,2 +1,5 @@
 form {
   background-color: gray; }
+.key-active {
+  background-color: red;
+  cursor: pointer; }

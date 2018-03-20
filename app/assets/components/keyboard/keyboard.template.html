@@ -1,0 +1,10 @@
+
+<ul class="keyboard">
+
+  <li ng-repeat="key in $ctrl.keys">
+    <button ng-attr-id="{{ 'key' + key.toUpperCase() }}" ng-class="{'key-active': $ctrl._Game.inputLetters.includes(key)}" ng-click ="$ctrl.keyClick(key)">
+      {{ key }}
+    </button>
+  </li>
+
+</ul>
