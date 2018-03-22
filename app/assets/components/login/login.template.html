@@ -3,16 +3,16 @@
   <fieldset>
 
     <fieldset class="form-group">
-      <input class="form-control form-control-lg" type="text" name="input" placeholder="Entrez un pseudo ici" ng-model="$ctrl.username" ng-minlength="3" ng-maxlength="10" ng-pattern="$ctrl.regex" required/>
+      <input class="form-control uppercase" type="text" name="input"  autocomplete="off" placeholder="Entrez un pseudo ici" ng-model="$ctrl.username" ng-minlength="3" ng-maxlength="10" ng-pattern="$ctrl.regex" required/>
     </fieldset>
 
-    <div class="form-errors" ng-show="loginForm.input.$touched && loginForm.input.$dirty && loginForm.input.$invalid">
-      <p>3 - 10 caractères.</p>
-      <p>Le pseudo ne doit pas contenir d'espaces ni de caractères spéciaux.</p>
+    <div class="form-errors" ng-show="loginForm.input.$dirty && loginForm.input.$invalid">
+      <p>3 à 10 caractères</p>
+      <p>Le pseudo ne doit pas contenir d'espaces ni de caractères spéciaux</p>
     </div>
 
     <button class="btn-launcher" type="submit">
-      Commencer
+      Lancer
     </button>
 
   </fieldset>

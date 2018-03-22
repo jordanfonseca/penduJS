@@ -1,8 +1,7 @@
-
-<ul class="keyboard">
+<ul class="keyboard" ng-if="$ctrl._Game.status == 1">
 
   <li ng-repeat="key in $ctrl.keys">
-    <button ng-attr-id="{{ 'key' + key.toUpperCase() }}" ng-class="{'key-active': $ctrl._Game.inputLetters.includes(key)}" ng-click ="$ctrl.keyClick(key)">
+    <button ng-attr-id="{{ 'key' + key.toUpperCase() }}" ng-class="{'key-active': !$ctrl._Game.inputLetters.includes(key)}" ng-click ="$ctrl.keyClick(key)">
       {{ key }}
     </button>
   </li>

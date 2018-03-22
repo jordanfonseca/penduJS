@@ -24,6 +24,7 @@ export default class Game {
         this.status = 1
         this.result = undefined
         this.inputLetters = []
+        this.foundLetters = []
 
         for (let i = 0; i < this.mysteryWord.length; i++) {
             this.foundLetters[i] = "_";

@@ -11,7 +11,7 @@ class KeyboardCtrl {
 
   keyClick (key) {
 
-    if (!this._Game.inputLetters.includes(key)) {
+    if (this._Game.status == 1 && !this._Game.inputLetters.includes(key)) {
       this._Game.tryLetter(key)
     } 
   }

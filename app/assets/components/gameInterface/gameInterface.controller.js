@@ -12,7 +12,13 @@ class GameInterfaceCtrl {
 
   showLifepoints() {
 
-    return this._Game.lifepoints;
+    let hearts = ""
+
+    for (let index = 0; index < this._Game.lifepoints; index++) {
+      hearts += "❤ " 
+    }
+
+    return hearts;
   }
 
   $onInit () {

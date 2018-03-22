@@ -6,10 +6,9 @@ class LoginCtrl {
    * Announces that input bindings aren't defined
    * @return {undefined} undefined
    */
-  constructor (Game, $state) {
+  constructor (Game) {
 
     this.regex = /^\s*\w*\s*$/
-    this._$state = $state
     this._Game = Game
 
   }

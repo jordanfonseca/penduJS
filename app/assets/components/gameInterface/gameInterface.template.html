@@ -1,26 +1,13 @@
-<p>{{ $ctrl._Game.username }}</p>
+<div class="interface" ng-if="$ctrl._Game.status == 1">
 
-<div class="lifepoints">
-  {{ $ctrl.showLifepoints() }}
+  <div class="lifepoints">
+    {{ $ctrl.showLifepoints() }}
+  </div>
+
+  <div class="mystery-word">
+    <span class="letter" ng-repeat="foundLetter in $ctrl._Game.foundLetters track by $index">
+      {{ foundLetter }}
+    </span>
+  </div>
+  
 </div>
-
-<div class="mystery-word">
-  <span class="letter" ng-repeat="foundLetter in $ctrl._Game.foundLetters track by $index">
-    {{ foundLetter }}
-  </span>
-</div>
-
-<div class="popup" ng-if="$ctrl._Game.result != undefined">
-  <p>Partie terminée !</p>
-  <p>Vous avez
-    <span>{{ $ctrl._Game.result }}</span>
-  </p>
-  <p>Le mot était :
-    <span>{{ $ctrl._Game.mysteryWord.join('') }}</span>
-  </p>
-
-  <button class="btn-launcher" type="button" ng-click="$ctrl._Game.launch()">
-    Recommencer
-  </button>
-</div>
-

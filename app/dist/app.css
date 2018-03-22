@@ -1,5 +1,130 @@
-form {
-  background-color: gray; }
-.key-active {
-  background-color: red;
-  cursor: pointer; }
+body {
+  color: #ffffff;
+  background-color: #060606;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px; }
+  body * {
+    box-sizing: border-box; }
+
+.container {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 360px;
+  padding: 20px; }
+
+.logo-xl-container {
+  max-width: 250px;
+  margin: 50px auto; }
+
+.logo-sm-container {
+  max-width: 100px;
+  margin: 0 auto; }
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
+.btn-launcher {
+  cursor: pointer;
+  position: relative;
+  background: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  color: #ff1dac;
+  margin-top: 50px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  transition: border-color 0.5s ease; }
+
+.btn-launcher:hover {
+  border: 1px solid #ff1dac; }
+
+.btn-launcher:hover::after {
+  animation-play-state: paused;
+  display: none; }
+
+.btn-launcher::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #ff1dac;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transition: border 0.5s ease;
+  animation: rotation 1s linear 0s infinite running; }
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+    border-left-color: #ff1dac;
+    border-bottom-color: #ff1dac; }
+  50% {
+    border-left-color: #f75c36;
+    border-bottom-color: #f75c36; }
+  100% {
+    transform: rotate(360deg);
+    border-left-color: #ff1dac;
+    border-bottom-color: #ff1dac; } }
+fieldset {
+  border: none; }
+
+form .form-control {
+  background: none;
+  border: solid 1px #ff1dac;
+  color: #ff1dac;
+  text-align: center;
+  padding: 10px;
+  box-shadow: none !important; }
+
+form .ng-invalid.ng-dirty {
+  border: solid 1px #f75c36;
+  color: #f75c36; }
+
+.form-errors {
+  color: #f75c36;
+  font-family: "Roboto Mono", monospace;
+  font-size: 12px; }
+.keyboard {
+  margin: 50px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; }
+  .keyboard li {
+    padding: 2px;
+    flex: 20%;
+    height: 50px;
+    list-style: none; }
+    .keyboard li button {
+      font-family: "Roboto Mono", monospace;
+      font-size: 16px;
+      text-transform: uppercase;
+      background: none;
+      border-radius: 5px;
+      color: #222222;
+      border: 1px solid #222222;
+      width: 100%;
+      height: 100%; }
+    .keyboard li .key-active {
+      cursor: pointer;
+      color: #ff1dac;
+      border-color: #ff1dac; }
+  .keyboard li:nth-child(n+21) {
+    flex: 6%; }
+.mystery-word, .lifepoints {
+  font-family: "Roboto Mono", monospace;
+  margin-top: 40px; }
+.message p {
+  margin-top: 40px; }
+
+.message .result {
+  font-size: 18px; }

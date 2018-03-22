@@ -1,0 +1,88 @@
+$sans-serif: 'Raleway', sans-serif
+$monospace: 'Roboto Mono', monospace
+$pink: #ff1dac
+$orange: #f75c36
+    
+body
+    color: #ffffff
+    background-color: #060606
+    font-family: $sans-serif
+    letter-spacing: 1px
+
+    *
+        box-sizing: border-box
+
+.container
+    position: relative
+    text-align: center
+    margin: 0 auto
+    width: 100%
+    max-width: 360px
+    padding: 20px
+
+.logo-xl-container
+    max-width: 250px
+    margin: 50px auto
+
+.logo-sm-container
+    max-width: 100px
+    margin: 0 auto
+
+.uppercase
+    text-transform: uppercase
+    letter-spacing: 3px
+
+.btn-launcher
+    cursor: pointer
+    position: relative
+    background: none
+    font-family: $sans-serif
+    font-size: 12px
+    text-transform: uppercase
+    letter-spacing: 1px
+    border: 1px solid transparent
+    color: $pink
+    margin-top: 50px
+    width: 130px
+    height: 130px
+    border-radius: 50%
+    transition: border-color 0.5s ease
+
+.btn-launcher:hover
+    border: 1px solid $pink
+
+.btn-launcher:hover::after
+    animation-play-state: paused
+    display: none
+
+
+.btn-launcher::after
+    position: absolute
+    top: 0
+    left: 0
+    content: ''
+    width: 100%
+    height: 100%
+    border-radius: 50%
+    border: 1px solid $pink
+    border-top-color: transparent
+    border-right-color: transparent
+    transition: border 0.5s ease
+    animation: rotation 1s linear 0s infinite running
+
+@keyframes rotation
+  0%
+    transform: rotate(0deg)
+    border-left-color: $pink
+    border-bottom-color: $pink
+
+  50%
+    border-left-color: $orange
+    border-bottom-color: $orange
+
+  100%
+    transform: rotate(360deg)
+    border-left-color: $pink
+    border-bottom-color: $pink
+
+    

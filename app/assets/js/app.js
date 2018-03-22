@@ -34,5 +34,8 @@ myApp.component('keyboard', keyboard)
 import { gameInterface } from '../components/gameInterface/gameInterface.js'
 myApp.component('gameInterface', gameInterface)
 
+import { message } from '../components/message/message.js'
+myApp.component('message', message)
+
 import Game from '../services/game.service.js';
 myApp.service('Game', Game);
