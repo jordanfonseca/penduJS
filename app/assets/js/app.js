@@ -12,7 +12,7 @@ import sass from '../sass/app.sass'
 
 let myApp = angular.module('penduApp', ['ui.router']);
 
-myApp.config(function ($stateProvider, $urlRouterProvider) {
+myApp.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
   var authState = {
     name: 'auth',
     url: '',
@@ -25,31 +25,36 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
     templateUrl: './views/ingame.html'
   }
 
-  $stateProvider.state(authState);
-  $stateProvider.state(ingameState);
+  $stateProvider.state(authState)
+  $stateProvider.state(ingameState)
 
-  $urlRouterProvider.otherwise('');
-});
+  $urlRouterProvider.otherwise('')
+}]);
+
+/**
+ * Services
+ *--------------------------------------------*/
+
+import Game from '../services/game.service.js'
+Game.$inject = ['$state']
+myApp.service('Game', Game)
 
 /**
  * Components
  *--------------------------------------------*/
 
 import { login } from '../components/login/login.js'
+login.$inject = ['Game']
 myApp.component('login', login)
 
 import { keyboard } from '../components/keyboard/keyboard.js'
+keyboard.$inject = ['Game']
 myApp.component('keyboard', keyboard)
 
 import { gameInterface } from '../components/gameInterface/gameInterface.js'
+gameInterface.$inject = ['Game', '$document']
 myApp.component('gameInterface', gameInterface)
 
 import { message } from '../components/message/message.js'
+message.$inject = ['Game']
 myApp.component('message', message)
-
-/**
- * Services
- *--------------------------------------------*/
-
-import Game from '../services/game.service.js';
-myApp.service('Game', Game);
