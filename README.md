@@ -13,3 +13,5 @@ npm run prod
 npm run start
 # Go to
 http://127.0.0.1:8080/
+# If you only want to test
+http://jordanfonseca.com/penduJS

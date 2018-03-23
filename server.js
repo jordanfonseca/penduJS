@@ -15,7 +15,7 @@ http.createServer( (request, response) => {
     let contentType = 'text/html'
     switch (extname) {
         case '.js':
-            contentType = 'text/javascript';
+            contentType = 'text/javascript'
             break
         case '.svg':
             contentType = 'image/svg+xml'
@@ -27,10 +27,10 @@ http.createServer( (request, response) => {
             contentType = 'application/json'
             break
         case '.png':
-            contentType = 'image/png';
+            contentType = 'image/png'
             break
         case '.jpg':
-            contentType = 'image/jpg';
+            contentType = 'image/jpg'
             break
     }
 
@@ -48,4 +48,4 @@ http.createServer( (request, response) => {
 
 }).listen(8080)
 
-console.log('Server running at http://127.0.0.1:8080');
+console.log('Server running at http://127.0.0.1:8080')

@@ -23,7 +23,7 @@ class GameInterfaceCtrl {
       hearts += "❤ " 
     }
 
-    return hearts;
+    return hearts
   }
 
   /**
@@ -47,7 +47,7 @@ class GameInterfaceCtrl {
       if (e.keyCode >= 65 && e.keyCode <= 90 && this._Game.status == 1) {
         document.getElementById('key' + e.key.toUpperCase()).click() 
       }
-    });
+    })
   }
 
 }

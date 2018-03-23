@@ -1,5 +1,5 @@
 // Import the JSON containing all mystery words
-import WORDS from '../json/words.json';
+import WORDS from '../json/words.json'
 
 /**
  * Provides the Game functions and values
@@ -68,7 +68,7 @@ export default class Game {
         // Prepare array with as many underscores as there are letters in the mystery word
         for (let i = 0; i < this.mysteryWord.length; i++) {
 
-            this.foundLetters[i] = "_";
+            this.foundLetters[i] = "_"
         }
 
         // Change application state
@@ -121,7 +121,7 @@ export default class Game {
                 while (index != -1) {
 
                     this.foundLetters[index] = key
-                    index = this.mysteryWord.indexOf(key, index + 1);
+                    index = this.mysteryWord.indexOf(key, index + 1)
                 }
 
                 // If the found letters array includes no underscores anymore, stop the game, it's won
