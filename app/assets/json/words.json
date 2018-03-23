@@ -1,0 +1,74 @@
+[
+    {
+        "word": "gazelle",
+        "type": "animal"
+    },
+    {
+        "word": "hippopotame",
+        "type": "animal"
+    },
+    {
+        "word": "leopard",
+        "type": "animal"
+    },
+    {
+        "word": "babouin",
+        "type": "animal"
+    },
+    {
+        "word": "corbeau",
+        "type": "animal"
+    },
+    {
+        "word": "dromadaire",
+        "type": "animal"
+    },
+    {
+        "word": "rhinoceros",
+        "type": "animal"
+    },
+    {
+        "word": "elephant",
+        "type": "animal"
+    },
+    {
+        "word": "autruche",
+        "type": "animal"
+    },
+    {
+        "word": "lynx",
+        "type": "animal"
+    },
+    {
+        "word": "hyene",
+        "type": "animal"
+    },
+    {
+        "word": "tigre",
+        "type": "animal"
+    },
+    {
+        "word": "vautour",
+        "type": "animal"
+    },
+    {
+        "word": "chameau",
+        "type": "animal"
+    },
+    {
+        "word": "taureau",
+        "type": "animal"
+    },
+    {
+        "word": "gorille",
+        "type": "animal"
+    },
+    {
+        "word": "chimpanze",
+        "type": "animal"
+    },
+    {
+        "word": "crocodile",
+        "type": "animal"
+    }
+]

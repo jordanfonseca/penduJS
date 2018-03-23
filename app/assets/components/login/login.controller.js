@@ -3,7 +3,7 @@
  */
 class LoginCtrl {
   /**
-   * Announces that input bindings aren't defined
+   * Load Game service and initialize regex for the form validation
    * @return {undefined} undefined
    */
   constructor (Game) {
@@ -14,11 +14,12 @@ class LoginCtrl {
   }
 
   /**
-   * Calls onLogin with the value of inputName put in fancyFunction
+   * Connect user with the form username thanks to the Game service handler if the form is valid
+   * @param {boolean} valid form validation
    * @return {undefined} undefined
    */
   submitForm (valid = false) {
-    
+
     if (valid) {
       this._Game.login(this.username)
     }

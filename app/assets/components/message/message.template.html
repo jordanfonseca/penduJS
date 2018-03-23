@@ -1,14 +1,18 @@
 <div class="message" ng-if="$ctrl._Game.status == 0">
-  <p>Partie terminée !</p>
+
+  <p class="uppercase">Partie terminée</p>
+
   <p class="result">Vous avez
-    <strong>{{ $ctrl._Game.result }}</strong>
+    <strong>{{ $ctrl.showResult() }}</strong>
   </p>
-  <p>Le mot mystère était 
+
+  <p ng-if="$ctrl._Game.result">Le mot mystère était 
     <strong>{{ $ctrl.getMysteryWord() }}</strong>
   </p>
 
   <button class="btn-launcher" type="button" ng-click="$ctrl._Game.launch()">
     Recommencer
   </button>
+
 </div>
 

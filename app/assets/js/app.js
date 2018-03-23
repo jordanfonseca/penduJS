@@ -1,13 +1,18 @@
+
+// Import angular dependencies
 import angular from 'angular'
 import uiRouter from '@uirouter/angularjs';
 
+// Import sass for webpack css export
 import sass from '../sass/app.sass'
 
-
+/**
+ * Application configuration
+ *--------------------------------------------*/
 
 let myApp = angular.module('penduApp', ['ui.router']);
 
-myApp.config(function ($stateProvider) {
+myApp.config(function ($stateProvider, $urlRouterProvider) {
   var authState = {
     name: 'auth',
     url: '',
@@ -22,8 +27,13 @@ myApp.config(function ($stateProvider) {
 
   $stateProvider.state(authState);
   $stateProvider.state(ingameState);
+
+  $urlRouterProvider.otherwise('');
 });
 
+/**
+ * Components
+ *--------------------------------------------*/
 
 import { login } from '../components/login/login.js'
 myApp.component('login', login)
@@ -36,6 +46,10 @@ myApp.component('gameInterface', gameInterface)
 
 import { message } from '../components/message/message.js'
 myApp.component('message', message)
+
+/**
+ * Services
+ *--------------------------------------------*/
 
 import Game from '../services/game.service.js';
 myApp.service('Game', Game);

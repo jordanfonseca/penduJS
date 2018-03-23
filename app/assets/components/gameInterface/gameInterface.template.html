@@ -1,5 +1,9 @@
 <div class="interface" ng-if="$ctrl._Game.status == 1">
 
+  <p class="category">
+    {{ $ctrl.showCategory() }}
+  </p>
+
   <div class="lifepoints">
     {{ $ctrl.showLifepoints() }}
   </div>

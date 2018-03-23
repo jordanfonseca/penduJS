@@ -123,8 +123,14 @@ form .ng-invalid.ng-dirty {
 .mystery-word, .lifepoints {
   font-family: "Roboto Mono", monospace;
   margin-top: 40px; }
+
+.category {
+  margin-top: 40px; }
 .message p {
   margin-top: 40px; }
 
 .message .result {
   font-size: 18px; }
+
+.message .uppercase {
+  color: #ff1dac; }
